@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #typewriter-h1 {
+            overflow: hidden;
+            /*hides content until animation */
+            border-right: .1em solid black;
+            /* size of curser */
+            white-space: nowrap;
+            /* Keeps the content on a single line */
+            margin: 10 auto;
+            /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em;
+            /* Adjust as needed */
+            animation:
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+            max-width: 32%;
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: black;
+            }
+        }
+    </style>
+    <title>Week 2</title>
+</head>
+
+<body>
+    <h1 id="typewriter-h1">Week 2 - September 10th</h1>
+
+    <p>&emsp;This week we focused on CSS and how to style HTML code. I wanted to dive deeper into this and incorporate
+        the styles with some sort of animation. After a little googling I landed on using the typewriter effect and put
+        the style on my header. You can see this effect above, feel free to refresh the page to see it run again. I
+        followed a tutorial from CSS tricks, linked below. This tutorial explains what each line of CSS does and why it
+        is important. As I implemented this code, I changed each value to see how it would affect my code. Sometimes it
+        made it do weird things such as teleport around the page while others it simply broke the effect. Following the
+        tutorial was not enough to make the code work perfectly as before doing bug fixes the cursor would go to the
+        very edge of the page on the right rather than staying with the text. This broke the effect, so I wanted to
+        resolve this. I landed on creating a max width for the curser and text element so that they would be 33% of the
+        page. This made the animation code believe that it reached the end of the page once it was at the end of the
+        text. I also changed the curser from orange to black as well as made the blinking curser a little smaller to be
+        a little more realistic and match the current style of my blog. </p>
+    <p>&emsp;I now had my animation working and understood how the CSS worked except for one thing the animation tag. I
+        learned from an article online that in CSS the animation will play the listed keyframes. So, what is a keyframe?
+        I had seen this in the code I recreated for my blog and had little understanding of it. Keyframes describe how
+        an animation should look at a certain time. I had modified them earlier to change the color of the curser, but
+        they were also in charge of moving the cursor as the text shows up and making sure it blinked like a real
+        curser. I definitely understand how to do animations more in CSS and am excited to try more in the future. </p>
+
+        <h3>Sources:</h3>
+    <p><a href="https://css-tricks.com/snippets/css/typewriter-effect/ ">This</a> is the source I followed to create the "typewriter effect". </p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations ">This</a> is the source I used to learn about animation and keyframes.</p>
+    </body>
+
+</html>
