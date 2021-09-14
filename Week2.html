@@ -20,7 +20,7 @@
             animation:
                 typing 3.5s steps(40, end),
                 blink-caret .75s step-end infinite;
-            max-width: 39%;
+            max-width: 550px;
             font-family: 'Courier New', Courier, monospace;
         }
 
@@ -62,8 +62,8 @@
         made it do weird things such as teleport around the page while others it simply broke the effect. Following the
         tutorial was not enough to make the code work perfectly as before doing bug fixes the cursor would go to the
         very edge of the page on the right rather than staying with the text. This broke the effect, so I wanted to
-        resolve this. I landed on creating a max width for the curser and text element so that they would be 39% of the
-        page. This made the animation code believe that it reached the end of the page once it was at the end of the
+        resolve this. I landed on creating a max width for the curser and text element so that they would be 550px. This
+        made the animation code believe that it reached the end of the page once it was at the end of the
         text. I also changed the curser from orange to black as well as made the blinking curser a little smaller to be
         a little more realistic and match the current style of my blog. </p>
     <p>&emsp;I now had my animation working and understood how the CSS worked except for one thing the animation tag. I
@@ -73,9 +73,11 @@
         they were also in charge of moving the cursor as the text shows up and making sure it blinked like a real
         curser. I definitely understand how to do animations more in CSS and am excited to try more in the future. </p>
 
-        <h3>Sources:</h3>
-    <p><a href="https://css-tricks.com/snippets/css/typewriter-effect/ ">This</a> is the source I followed to create the "typewriter effect". </p>
-        <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations ">This</a> is the source I used to learn about animation and keyframes.</p>
-    </body>
+    <h3>Sources:</h3>
+    <p><a href="https://css-tricks.com/snippets/css/typewriter-effect/ ">This</a> is the source I followed to create the
+        "typewriter effect". </p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations ">This</a> is the
+        source I used to learn about animation and keyframes.</p>
+</body>
 
 </html>
