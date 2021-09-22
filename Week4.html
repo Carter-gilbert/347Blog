@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4</title>
+    <style>
+        button {
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        button:hover {
+            background-color: blue;
+            color: white;
+        }
+        
+        @media screen and (max-width: 630px) {
+            button:hover {
+                background-color: red;
+                color: white;
+            }
+        }
+        
+        code {
+            display: table;
+            background-color: rgb(194, 194, 194);
+            margin: 0 auto;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<header>
+    <h1>Week 4 - September 24th</h1>
+</header>
+
+<body>
+    <p>This week we learned about positioning elements in HTML and improving usability. I had already incorporated many of these techniques into my project1 or blog, but I decided to do something fun with the media tag. I wanted to do something simple, but
+        clear to the end-user so I made a button that turned blue if you hovered on desktop or red if you hovered on mobile. The @media tag automatically switches between the two colors at a screen width of 630px so if you resize the window to be narrow
+        it will also turn red. Try it for yourself! </p>
+
+    <button>I turn blue if on desktop and red if on mobile!</button>
+    <br>
+    <p>As you can see in the CSS style code below, I set the button:hover to be blue, but then using the media tag I change it to red if the screen width is less than 630px. This will be extremely helpful for resizing elements and rearranging them for mobile
+        when making my static website as you can modify any CSS style element using this technique. Maybe you want flexbox row on desktop but then on the mobile version you want to flip to column so the elements can be easily visible and not tiny on the
+        user’s screen, well this is the perfect way to do it. This will certainly improve the usability on my future blog posts and web pages. </p>
+    <pre>
+    <code>
+    button:hover {
+        background-color: blue;
+        color: white;
+    }
+    
+    @media screen and (max-width: 630px) {
+        button:hover {
+            background-color: red;
+            color: white;
+        }
+    }
+</code>
+</pre>
+
+    <p>This week out of my own personal curiosity I wanted to see how hard it was to make images move around the screen. This would be practical for a banner with long text running along the top of a web page or just making a gif move across the screen.
+        Turns out it was extremely easy. I learned that using the marquee tag that you can make images do a variety of things at a speed of your choice. Using this tag it is easy to make images continuously scroll between the left and right side of the
+        screen or even bounce back and forth. </p>
+    <marquee behavior="scroll" scrollamount="30" direction="left">
+        <img src="/pics/bird.gif" width="125" height="82" alt="Flying bird">
+    </marquee>
+
+    <marquee behavior="alternate" scrollamount="30" direction="left">
+        <img src="/pics/bird.gif" width="125" height="82" alt="Flying bird">
+    </marquee>
+
+    <p>I did both, make the birds go from the right to the left of the screen and then wrap as well as bounce between both sides, above to demonstrate and selected a relatively high speed so that you could see the effect quickly, the default is quite slow
+        on large screens. But this could be another use of the media tag as you could make the images smaller and move slower on mobile while making them move faster on the desktop version.</p>
+
+    <br></br>
+    <h3>Sources:</h3>
+    <p><a href="https://www.youtube.com/watch?v=2KL-z9A56SQ">This</a> is the source I used to learn how to use the media tag. </p>
+    <p><a href="https://www.quackit.com/html/codes/scrolling_images.cfm">This</a> is the source I used to learn how to use the marquee tag. </p>
+    <p><a href="https://giphy.com/explore/transparent-birds">This</a> is the source I used to get the gif of the birds flying. </p>
+
+</body>
+
+</html>
