@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="week6.js"></script>
+    <link rel="stylesheet" href="week6.css">
+</head>
+
+<body>
+
+    <!-- <h1>Week 6 - October 8th</h1> -->
+
+    <div class="container">
+
+        <div class="animate one">
+            <span>W</span><span>e</span><span>e</span><span>k</span> &nbsp;
+            <span>6</span>
+            <a class="repeat" href="javascript:void(0);">Repeat First Animation</a>
+        </div>
+        <div class="animate two">
+            <span>O</span><span>c</span><span>t</span><span>o</span><span>b</span><span>e</span><span>r</span>
+            <span>8</span><span>t</span><span>h</span>
+            <a class="repeat" href="javascript:void(0);">Repeat Second Animation</a>
+
+        </div>
+    </div>
+
+
+
+    <p>This week in class we have been studying JavaScript and doing some API calls to retrieve JSON lists. For some of the activities we will then take data from the lists and put it onto the screen using document.body.append. Before getting into JavaScript,
+        I looked and didn’t see anything exciting online, I decided to do a simple animation for my title. These have been my favorite so far so I figured after taking last week off from my blog I would start with one more animation. This animation was
+        relatively simple. For the week it just moves the letters into place from the top and makes them less opaque while for October 8th essentially, it just goes letter by letter and makes the letter less opaque and rotates it from upside down. It
+        makes a pretty playful effect that I think suited this blog post. </p>
+
+    <p>Here is a code snippet from the 2nd animation.</p>
+    <code>
+        <pre>
+    .two span {
+        color: orange;
+        opacity: 0;
+        transform: translate(200px, -100px) scale(2);
+        animation: ballDrop .3s forwards;
+    }
+    
+    @keyframes ballDrop {
+        60% {
+            transform: translate(0, 20px) rotate(-180deg) scale(.5);
+        }
+        100% {
+            transform: translate(0) rotate(0deg) scale(1);
+            opacity: 1;
+        }
+    }
+</pre>
+</code>
+
+    <p>We can see from this that we are using the ball drop animation and each letter takes .3 seconds to complete the animation. As I said above, it sets the letters to be small and upside down, then makes each letter less opaque as it rotates and moves
+        them to the correct position. </p>
+    <p>
+
+        Then I decided I want to make a JavaScript button that would replay the animation when you click it. So, I followed the tutorial and made the two buttons that you see above. The first one will trigger the first animation while the second will trigger
+        the second. The button works by finding an element with class ‘repeat’, which I have assigned to both animations, then it finds the animate attribute for the desired div before finally readding it which triggers the animation again. </p>
+
+    <br></br>
+    <h3>Sources:</h3>
+    <p><a href="https://speckyboy.com/css-javascript-text-animation-snippets/
+        ">This</a> is the source I used for learning how to do the animations. </p>
+    <p><a href="https://codepen.io/kh-mamun/pen/NdwZdW">This</a> is the source I used for learning how to do the js button and did some testing of possible changes to the code. </p>
+</body>
+
+</html>
