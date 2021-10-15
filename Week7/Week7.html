@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7</title>
+    <style>
+        code {
+            display: table;
+            background-color: rgb(194, 194, 194);
+            margin: 0 auto;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            border: solid 1px black;
+            border-radius: 7px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Week 1 - October 15th</h1>
+
+    <p>This week we have continued to study JavaScript and began to make and use endpoints in express. I wanted to loop back to something we had mentioned earlier when we were working on project 1, forms. We have made forms before, but I wanted to learn
+        how to accept the data and save it as a json file. What we need to do is make a form, as we have in the past but assign an id so that we can grab the value in JavaScript. For example: </p>
+
+
+
+    <code>
+        <pre>
+
+            &#60;form&#62;
+                &#60;label for="name">Name:&#60;/label&#62;
+                &#60;input type="text" id="name" name="name" value="Name"&#62;
+                &#60;label for="email">Email:&#60;/label&#62;
+                &#60;input type="email" id="email" name="email" value="Email"&#62;
+            &#60;/form&#62;
+
+        </pre>
+    </code>
+
+    <br>
+    <p>Notice how each part of the form has a id= so that when we code the JavaScript we can grab each of these elements and extract their values. We can use the getElementByID in JavaScript to get the elements by their ID name or email. Lastly we append
+        this data to an array so that it can be stored. </p>
+    <code>
+        <pre>
+            data.append("name", document.getElementById("name").value);
+            data.append("email", document.getElementById("email").value);
+        </pre>
+    </code>
+
+
+    <p><a href="https://code-boxx.com/get-html-form-data-javascript/
+        ">This</a> is the source I used for learning how make the ID and store the data. </p>
+
+</body>
+
+</html>
