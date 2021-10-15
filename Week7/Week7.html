@@ -26,7 +26,7 @@
     <p>This week we have continued to study JavaScript and began to make and use endpoints in express. Some of these topics were a little difficult to understand so I spent a lot of time working on that leaving less time for the blog. For my blog this week
         I wanted to loop back to something we had mentioned earlier when we were working on project 1, forms. We have made forms before, but I wanted to learn how to accept the data and save it as a json file. At this point I understand how a json file
         is formatted and how it is posted to a server but I didn’t know how this would work with actual HTML elements. What we need to do is make a form, as we have in the past, but assign an id so that we can grab the value in JavaScript. For example:
-        </p>
+    </p>
 
 
 
@@ -44,8 +44,9 @@
     </code>
 
     <br>
-    <p>Notice how each part of the form has a id= so that when we code the JavaScript we can grab each of these elements and extract their values. We can use the getElementByID in JavaScript to get the elements by their ID name or email. Lastly we append
-        this data to an array so that it can be stored. </p>
+    <p>Notice how each part of the form has an id= so that when we code the JavaScript we can grab each of these elements and extract their values. We can use the getElementByID in JavaScript to get the elements by their ID name or email. We can do this
+        by using .value to retrieve the data currently in each input element. Lastly, we append this data to an array so that it can be stored we could also format it into a JSON array, but for this example, we are simply putting it into an array for
+        proof of concept as once you have the data in an array it is easy to reformat into JSON. </p>
     <code>
         <pre>
             data.append("name", document.getElementById("name").value);
