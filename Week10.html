@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10</title>
+    <style>
+        code {
+            display: table;
+            background-color: rgb(194, 194, 194);
+            margin: 0 auto;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            border: solid 1px black;
+            border-radius: 7px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Week 10 - November 5th</h1>
+
+    <p>
+        During the three weeks without a blog post, we have been focusing on SQL databases and working on our second PA which we designed a database that we will use with PA3. This week we learned and read about react which essentially combines JS and HTML. For this week’s blog I wanted to read and learn some more about react JS before we continue to dive into what we can use it for. A cool feature of react JS is that we can have components that can be easily duplicated using method calls rather than using code duplication like we did in the HTML section of this class. In these components we can also use variables so we can input different data into a similar structure, further avoiding code duplication. For example please look at the code below.  
+    </p>
+
+    <code>
+        <pre>
+            function Greeter(props) {
+                return &#60;h1&#62;Welcome to CS347, {props.name}!&#60;/h1&#62;;
+              }
+              
+              function App() {
+                return (
+                    &#60;div&#62;
+                        &#60;Greeter name="Carter" />
+                        &#60;Greeter name="Jackie" />
+                        &#60;Greeter name="Cory" />
+                    &#60;/div&#62;
+                );
+              }
+        </pre>
+    </code>
+
+    <p>This code will print three headers all saying “Welcome to CS347, {props.name}! “, but rather than {props.name} this is replaced with Carter, Jackie, or Cory. Notice how it is essentially the same code, however, we are using the same method and passing it different name variables. This makes web development much easier and makes code much easier to debug. </p>
+    
+    <p>Above you can see props and how we use props.name as the variable while we assign props.name by simply typing name=”” after calling the method name in the brackets. This is how a variable is passed to props. In this example props only stores names, but you can pass more than one variable to props when doing the method call. A practical example would be a program that needs to print a date. We could assign day, month, and year in the method call and to retrieve it in the method itself we would simply use props.day, props.month, and props.year. You can quickly see how powerful this can be and the endless uses for it. </p>
+    
+    
+    <p><a href="https://reactjs.org/docs/components-and-props.html
+        ">This</a> is the source I used for learning how make the function Greeter and learn about props.  </p>
+</body>
+</html>
