@@ -35,6 +35,24 @@
 
 
     <p>I then went on to read about react redux also known as store. A store can hold an entire tree of state and only when given a specific action will it update. The purpose of having these specific states is so that the program operates constantly for the end user. For programs we have written so far it has not been necessary but once we incorporate our project 2 SQL database then we will need to manage timing between the client and the server with redux. We can have an example for retrieving data from the database then have another one for updating the client screen. That way the client screen cannot update before retrieving data from the SQL database.  </p>
+    <p>Here is an example store</p>
+    <code>
+        <pre>
+            import { createStore } from 'redux'
+            const store = createStore(todos, ['Use Redux'])
+
+            function addTodo(text) {
+              return {
+                type: 'ADD_TODO',
+                text
+              }
+            }
+
+store.dispatch(addTodo('Write my blog'))
+store.dispatch(addTodo('Work on the lab'))
+        </pre>
+    </code>
+    
     <p><a href="https://reactjs.org/docs/faq-state.html  
         ">This</a> is the source I used for learning some differnces between props and state.  </p>
         <p><a href="https://redux.js.org/api/store
