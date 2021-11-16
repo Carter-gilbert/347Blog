@@ -36,12 +36,14 @@
         </pre>
     </code>
 
+    <p>Now we need a way to actually navigate to each page, for a real website you would likely make it look nice, but for this proof of concept we can simple use the code below. Each method is for one page and all it does is make a heading. If you wanted more on the page you would use this method to add it. Essentially what goes into the return is the HTML (or js) you want to display on the screen. This is different than how we have given HTML paths in the past, but this enables us to have multiple dynamic pages.  </p>
+
 <pre>
     <code>
     function Home() {
         return (
         &#60;div>
-            &#60;h2>Home</h2>
+            &#60;h2>Home Page&#60;/h2>
         &#60;/div>
         );
       }
@@ -49,7 +51,7 @@
       function About() {
         return (
         &#60;div>
-            &#60;h2>About</h2>
+            &#60;h2>About Page&#60;/h2>
         &#60;/div>
         );
       }
@@ -57,10 +59,13 @@
 </pre>
 
 
+
 <br></br>
 <h3>Sources:</h3>
 <p><a href="https://v5.reactrouter.com/web/example/basic 
     ">This</a> is the source I used for learning some basic routing.  </p>
+    <p><a href="https://v5.reactrouter.com/web/example/route-config
+        ">This</a> is the source I used for learning how to configure a router.  </p>
     
 </body>
 </html>
