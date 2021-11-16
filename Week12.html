@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12</title>
+    <style>
+        code {
+            display: table;
+            background-color: rgb(194, 194, 194);
+            margin: 0 auto;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            border: solid 1px black;
+            border-radius: 7px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Week 12 - November 19th</h1>
+
+    <p>This week we learned how to incorporate API calls with react js. We learned how to make a store which allows us to change states and ultimately have a callback and dispatcher that will wait for the API to send the data before moving on. This removes errors caused by code using data that has not yet been received from the API.  We also read about multi page apps which can be made using the react router. The example from the reading was a little confusing so I decided to find some external sources to clarify some things.  </p>
+    <p>We first need to make a Router component with a switch statement inside to specify the pages we would like to switch between (the code below is a portion of the code required). As you can see each page needs its own route and path so react knows how to redirect. </p>
+    <code>
+        <pre>
+        &#60;Switch>
+            &#60;Route exact path="/">
+                    &#60;Home />
+                  &#60;/Route>
+                &#60;Route path="/about">
+                    &#60;About />
+                  &#60;/Route>
+        &#60;/Switch>
+        </pre>
+    </code>
+
+<pre>
+    <code>
+    function Home() {
+        return (
+        &#60;div>
+            &#60;h2>Home</h2>
+        &#60;/div>
+        );
+      }
+          
+      function About() {
+        return (
+        &#60;div>
+            &#60;h2>About</h2>
+        &#60;/div>
+        );
+      }
+    </code>
+</pre>
+
+
+<br></br>
+<h3>Sources:</h3>
+<p><a href="https://v5.reactrouter.com/web/example/basic 
+    ">This</a> is the source I used for learning some basic routing.  </p>
+    
+</body>
+</html>
