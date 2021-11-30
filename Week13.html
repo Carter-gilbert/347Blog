@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 13</title>
+    <style>
+        code {
+            display: table;
+            background-color: rgb(194, 194, 194);
+            margin: 0 auto;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            border: solid 1px black;
+            border-radius: 7px;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Week 13 - Decmber 3rd</h1>
+    
+    <p>This week we continued our study of react JS and I finally began putting the pieces together as I made progress on my project 3 over break. On Tuesday, we worked on DukeBox, which used react router to change to different pages. We made three pages, one for artists, albums, and songs and the router swapped between these components for us. For this blog I wanted to learn how to do requests other than GET so I could use DELETE and POST on my project3. After watching a video and reading a few articles I was able to figure out how to make a POST request with my project2. Below is some working code that is currently in my project3. </p>
+    <code>
+        <pre>
+            const requestOptions = {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({"question": question, "answer1": answer1, "answer2": answer2, "answer3": answer3, "answer4": answer4, "correct_ans": correctAns})
+            };
+       
+            fetch(`https://carter-gilbert.me:8443/questions/${id}`, requestOptions)
+                .then(response => response.json())
+        </pre>
+    </code>
+
+
+    <br></br>
+<h3>Sources:</h3>
+<p><a href="https://www.youtube.com/watch?v=EcRFYF4B3IQ
+    ">This</a> is the source I used for learning how to do POST requests in ReactJS.  </p>
+    <p><a href="
+        ">This</a> is the source I used for   </p>
+</body>
+</html>
